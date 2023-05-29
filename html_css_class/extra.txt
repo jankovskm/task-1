@@ -1,0 +1,5 @@
+https://www.w3schools.com/
+https://codepen.io/
+https://www.freecodecamp.org/learn/2022/responsive-web-design/#learn-css-flexbox-by-building-a-photo-gallery
+https://getbootstrap.com/docs/5.0/getting-started/introduction/
+https://startbootstrap.com/snippets

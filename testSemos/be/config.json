@@ -1,0 +1,6 @@
+{
+    "development": {
+        "port": 10000,
+        "jwt_key": "secret_jwt"
+    }
+}

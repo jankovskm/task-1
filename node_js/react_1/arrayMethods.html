@@ -1,0 +1,94 @@
+<html>
+    <head></head>
+    <body>
+        <button class="btn">Click me</button>
+
+        <script>
+            let users = [
+                {firstName: "Susan", lastName: "Steward", age: 14},
+                {firstName: "Matt", lastName: "Doe", age: 24},
+                {firstName: "Lu", lastName: "Pascale", age: 34}
+            ];
+
+            let mapUsers = users.map((user) => {
+                let fullName = user.firstName +" "+ user.lastName;
+                return fullName;
+            });
+            //console.log(mapUsers);
+
+            let cars = [
+                {year: 2001, make: "Alfa", model: 147},
+                {year: 2002, make: "Renault", model: "Twingo"},
+                {year: 1995, make: "Lada", model: "Niva"}
+
+            ];
+
+            let mapCars = cars.map((car) => {
+                let fullName = car.make +": "+ car.model +' - '+ car.year;
+                return fullName;
+            });
+            //console.log(mapCars);
+
+            let result = users.filter((user) => user.age > 20);
+            let onePerson = users.find((person) => person.firstName === "Lu");
+            // console.log(result);
+            // console.log(onePerson);
+
+            let carsFiltered = cars.filter((car) => car.year < 2010);
+            let carAudi = cars.find((car) => car.make === "Audi");
+            console.log(carsFiltered);
+            console.log(carAudi);
+
+
+            let fruits = ["mango", "apples", "lemons", "orange"];
+            let fruit1 = fruits[0];
+            let fruit2 = fruits[1];
+            //instead of the above we should use destructuring
+            let [fruitOne,,fruitThree] = fruits;
+            console.log(fruitOne, fruitThree);
+
+            const human = {
+                name: "Milena",
+                lastName: "Jankovska",
+                age: 32,
+                hobbies: {
+                    hobbie1: "reading",
+                    hobbie2: "soccer"
+                }
+            };
+            const {name, age, hobbies: {hobbie2}} = human;
+            console.log(name, age, hobbie2);
+
+            const carObj = {
+                make: "Lada",
+                model: "Niva",
+                year: 1990,
+                doors: {
+                    doors1: 2,
+                    doors2: 4
+                }
+            }
+
+            const {year, doors: {doors1}} = carObj;
+            console.log(doors1);
+            if(year < 2010){
+                console.log("You need a new car!");
+            }
+
+            let fruits2 = ["mango", "apples", "lemons", "orange"];
+            let [firstFruit, ...rest] = fruits2; //prv element i array od site drugi so rest operatorot
+            console.log(rest);
+
+            let pets = ["dog", "cat"];
+            let wildAnimals = ["lion", "wolf", "tiger"];
+
+            let animals = [pets, wildAnimals]; //array with arrays
+            let animalsSpread = [...pets, ...wildAnimals, ...fruits2]; //merges two arrays together
+            console.log(animalsSpread);
+
+            //creating a new project
+            //npx create-react-app [name of the project]
+            //then cd class1 & then npm start
+        </script>
+    </body>
+</html>
